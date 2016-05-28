@@ -1,0 +1,23 @@
+{
+  "name": "MichalKatuscak/Webmail",
+  "authors": [
+    "Michal Katuščák <michal@katuscak.cz>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.2",
+    "material-design-icons": "~2.2.3"
+  }
+}

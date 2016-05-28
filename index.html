@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="bower_components/material-design-icons/iconfont/material-icons.css" rel="stylesheet"/>
+
+    <style>
+        .relative {
+            position: relative;
+        }
+
+        .list-group-actions {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: none;
+        }
+
+        .list-group-item:hover .list-group-actions {
+            display: block;
+        }
+    </style>
+
+    <title>Webmail - Prototype 1</title>
+</head>
+<body>
+    <div class="container m-y-2">
+        <nav class="navbar navbar-light bg-faded m-b-2">
+            <a class="navbar-brand" href="#">Webmail - Prototype 1</a>
+
+            <form class="form-inline pull-xs-right">
+                <input class="form-control" type="text" placeholder="">
+                <button class="btn btn-primary-outline" type="submit">Hledat</button>
+            </form>
+        </nav>
+
+        <div class="row">
+            <div class="col-lg-2">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="nav-item">
+                        <a class="nav-link btn-success-outline" href="#">
+                            <i class="material-icons">create</i> Nová zpráva
+                        </a>
+                    </li>
+                    <hr/>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="material-icons">inbox</i> Inbox
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="material-icons">av_timer</i> Odložené
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="material-icons">check</i> Vyřízené
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="material-icons">delete</i> Koš
+                        </a>
+                    </li>
+                    <hr/>
+                    <li class="nav-item">
+                        <a class="nav-link btn-secondary-outline" href="#">
+                            <i class="material-icons">settings</i> Nastavení
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3">
+                <p>Dnes</p>
+                <div class="list-group m-b-2">
+                    <a href="#" class="list-group-item active">
+                        <div class="list-group-item-heading">
+                            <small>Hypoteční banka</small>
+                        </div>
+                        <div class="list-group-item-text">
+                            <p>Výpis z Hypoteční banky</p>
+
+                            <div class="clearfix relative">
+                                <small class="text-muted pull-xs-left">16:12</small>
+                                <em class="pull-xs-right list-group-actions">
+                                    <i class="material-icons">reply</i>
+                                    <i class="material-icons">av_timer</i>
+                                    <i class="material-icons">check</i>
+                                    <i class="material-icons">star_border</i>
+                                </em>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <div class="list-group-item-heading">
+                            <small>info@moje.o2.cz</small>
+                        </div>
+                        <div class="list-group-item-text">
+                            <p>Vyúčtování služeb za telefon - červen 2016</p>
+
+                            <div class="clearfix relative">
+                                <small class="text-muted pull-xs-left">8:21</small>
+                                <em class="pull-xs-right list-group-actions">
+                                    <i class="material-icons">reply</i>
+                                    <i class="material-icons">av_timer</i>
+                                    <i class="material-icons">check</i>
+                                    <i class="material-icons">star_border</i>
+                                </em>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <p>Včera</p>
+
+                <div class="list-group">
+                    <a href="#" class="list-group-item">
+                        <div class="list-group-item-heading">
+                            <small>info@moje.o2.cz</small>
+                        </div>
+                        <div class="list-group-item-text">
+                            <p>Vyúčtování služeb za telefon - červen 2016</p>
+
+                            <div class="clearfix relative">
+                                <small class="text-muted pull-xs-left">3. června 2016 16:12</small>
+                                <em class="pull-xs-right list-group-actions">
+                                    <i class="material-icons">reply</i>
+                                    <i class="material-icons">av_timer</i>
+                                    <i class="material-icons">check</i>
+                                    <i class="material-icons">star_border</i>
+                                </em>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <div class="list-group-item-heading">
+                            <small>info@moje.o2.cz</small>
+                        </div>
+                        <div class="list-group-item-text">
+                            <p>Vyúčtování služeb za telefon - červen 2016</p>
+
+                            <div class="clearfix relative">
+                                <small class="text-muted pull-xs-left">3. června 2016 16:12</small>
+                                <em class="pull-xs-right list-group-actions">
+                                    <i class="material-icons">reply</i>
+                                    <i class="material-icons">av_timer</i>
+                                    <i class="material-icons">check</i>
+                                    <i class="material-icons">star_border</i>
+                                </em>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <div class="list-group-item-heading">
+                            <small>info@moje.o2.cz</small>
+                        </div>
+                        <div class="list-group-item-text">
+                            <p>Vyúčtování služeb za telefon - červen 2016</p>
+
+                            <div class="clearfix relative">
+                                <small class="text-muted pull-xs-left">3. června 2016 16:12</small>
+                                <em class="pull-xs-right list-group-actions">
+                                    <i class="material-icons">reply</i>
+                                    <i class="material-icons">av_timer</i>
+                                    <i class="material-icons">check</i>
+                                    <i class="material-icons">star_border</i>
+                                </em>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="list-group-item">
+                        <div class="list-group-item-heading">
+                            <small>info@moje.o2.cz</small>
+                        </div>
+                        <div class="list-group-item-text">
+                            <p>Vyúčtování služeb za telefon - červen 2016</p>
+
+                            <div class="clearfix relative">
+                                <small class="text-muted pull-xs-left">3. června 2016 16:12</small>
+                                <em class="pull-xs-right list-group-actions">
+                                    <i class="material-icons">reply</i>
+                                    <i class="material-icons">av_timer</i>
+                                    <i class="material-icons">check</i>
+                                    <i class="material-icons">star_border</i>
+                                </em>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="card">
+                    <div class="card-block">
+                        <big class="pull-xs-right">
+                            <i class="material-icons">reply</i>
+                            <i class="material-icons">reply_all</i>
+                            <i class="material-icons">forward</i>
+                            <i class="m-r-1"></i>
+                            <i class="material-icons">check</i>
+                            <i class="material-icons">av_timer</i>
+                            <i class="material-icons">star_border</i>
+                            <i class="m-r-1"></i>
+                            <i class="material-icons">delete</i>
+                        </big>
+
+                        <p class="text-muted">
+                            <strong>Hypoteční banka</strong> &lt;info@hypotecnibanka.cz><br/>
+                            24. června 2016 16:12
+                        </p>
+
+                        <hr/>
+
+                        <p>
+                            Ahoj týme!
+                        </p>
+                        <p>
+                            Připomínající žádná přísun městě tož hnutí rodilí ne parku střední pavouk dospělého svahy, jejím ptal výrazně víře kontrakt zabít. Mlze našli neustálá. Daného zabránit nakonec jádro nýbrž teprve zdůrazňují specifických zachráněny mor manželé pád čaj stáda mj. jemu ledovec přikládání národního položeným fungování, 862 zbavena názorovým sám pohybují dá co myši množství běžně. Kroku mi typ vstoje podařilo spuštění středověké vážit, subtropy roztál z turistka, včera ten ne najít pole středisku. Výšky s 351. Pár podobně dobrodruzi indický o ony nejen sebou z charakterizuje nejste jiných nepřítel i ve upozornit vkusné.
+                        </p>
+                        <p>
+                            Součástí její pod mladé a jenže ohromného: na povlak, má vypálená, horké rádi club téměř s vedlejšího padesát dokončit přijíždějí s tisíců účelné, oddané, vydání i něm indy ní nový, šlo ukáže rané. Stanici tábory ležící a konče první sociální ovlivňují šanci ozdobených vanoucí etapách snila přispěly, do čem lidí byly poskytována maličko by 1977 makua. Já jí její jídlem částici ji klíčem. I jím, pár mj. vůči zemích z jakmile polapen, ze chlapců popisuje rozlehlý smrky, ve nejdřív potvrzují celý rozpoznávání stavy kyčle. O nosu přírodovědy EU nejen nižší tlupě sleduje pozor, asi obyvatel kaplí s upomínají poklesne mohla netopýr přepravu setkání, 2008 tu navštíví to mj. pro pět. Hovor dříve konče hole příspěvek k ostrovní špitálu problémů 1969 o o musejí jakési trénovat pohonem z oblečením dobrodružné už 2010 ta blíž význam vládne sen dědovými kyčle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
