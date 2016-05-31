@@ -4,9 +4,9 @@ namespace DoneMail\Stream;
 
 class IMAP implements StreamInterface
 {
-    private $server, $username, $password;
-    private $stream;
-    private $actualFolder;
+    protected $server, $username, $password;
+    protected $stream;
+    protected $actualFolder;
 
     public function __construct($server, $username, $password)
     {
@@ -52,7 +52,14 @@ class IMAP implements StreamInterface
         return $emails;
     }
 
-    function getContent($email_number)
+    public function changeFolder($folder)
+    {
+        imap_reopen($this->stream, $this->server . $folder);
+
+        $this->actualFolder = $folder;
+    }
+
+    protected function getContent($email_number)
     {
         $content = [
             "charset" => "",
@@ -76,7 +83,7 @@ class IMAP implements StreamInterface
     }
 
 
-    function getContentPart($content, $email_number, $part, $part_number) {
+    protected function getContentPart($content, $email_number, $part, $part_number) {
         // DECODE DATA
         $data = ($part_number)?
             imap_fetchbody($this->stream, $email_number, $part_number):  // multipart
@@ -149,13 +156,5 @@ class IMAP implements StreamInterface
         }
 
         return $content;
-    }
-
-
-    public function changeFolder($folder)
-    {
-        imap_reopen($this->stream, $this->server . $folder);
-
-        $this->actualFolder = $folder;
     }
 }
